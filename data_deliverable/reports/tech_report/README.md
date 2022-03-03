@@ -5,15 +5,22 @@ This is where you can type out your tech report.
 
 We obtained our first dataset on Grammy Awards winners from Kaggle (https://www.kaggle.com/unanimad/grammy-awards). This file contains all nominations and winners of Grammy Awards from 1958-2019. Information include year, award title, song/album/artist names. We would need to perform data cleaning since we're only interested in the songs winning the award.
 
-We also need data about features of those award winning songs and we utilized Spotify API to collect those information. We collected numeric features related to the song (details stated in the da 
+We also need data about features of those award winning songs and we utilized Spotify API to collect those information. We collected numeric features related to the song (details stated in data_spec) and the numeric values made it easier for future comparison and analysis.
+
+Since one of our hypothesis is about how fame of the singer and popularity of the song could affect the chance of award-winning, we also need data that represent the popularity. We utilized Billboard API to get popularity data on the songs and singers that previously won the Grammy. Specificly, we looked at Billboard ranking of singer, the number of weeks on Billboard of the song, the highest rank on the chart etc. 
 
 
 ### How did you collect your data?
 
+We downloaded one dataset from Kaggle, and used API data collection for the two other datasets.
 
 ### Is the source reputable?
 
+The Kaggle dataset is put together by Raphael Fontes, a data scientist from Federal Institute of Sergipe in Brazil. Though he's not an official source, he is a "Datasets Master" endorsed by Kaggle and have experience in research, lecturing at Universidade Federal de Sergipe, and working in the industry.
+The other sources are from Spotify and Billboard official API, which is reputable and reliable. 
+
 ### How did you generate the sample? Is it comparably small or large? Is it representative or is it likely to exhibit some kind of sampling bias?
+
 
 
 ### Are there any other considerations you took into account when collecting your data? This is open-ended based on your data; feel free to leave this blank. (Example: If it's user data, is it public/are they consenting to have their data used? Is the data potentially skewed in any direction?)
