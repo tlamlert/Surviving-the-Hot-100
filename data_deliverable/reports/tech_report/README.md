@@ -3,6 +3,10 @@ This is where you can type out your tech report.
 
 ### Where is the data from?
 
+We obtained our first dataset on Grammy Awards winners from Kaggle (https://www.kaggle.com/unanimad/grammy-awards). This file contains all nominations and winners of Grammy Awards from 1958-2019. Information include year, award title, song/album/artist names. We would need to perform data cleaning since we're only interested in the songs winning the award.
+
+We also need data about features of those award winning songs and we utilized Spotify API to collect those information. We collected numeric features related to the song (details stated in the da 
+
 
 ### How did you collect your data?
 
