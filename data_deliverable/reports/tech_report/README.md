@@ -45,5 +45,6 @@ The other sources are from Spotify and Billboard official API, which is reputabl
 
 ### Do you need to throw any data away? What data? Why? Any reason this might affect the analyses you are able to run or the conclusions you are able to draw?
 
+Not all Grammy winners are relative to our analysis. For instance, we're not interested in Best Artists because these are not acknowledging the songs, but acknowledging people. Hence, we would need to exclude those datapoints from dataset
 
 ### Summarize any challenges or observations you have made since collecting your data. Then, discuss your next steps and how your data collection has impacted the type of analysis you will perform. (approximately 3-5 sentences)
