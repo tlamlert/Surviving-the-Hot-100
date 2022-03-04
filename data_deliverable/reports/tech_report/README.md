@@ -3,7 +3,7 @@ This is where you can type out your tech report.
 
 ### Where is the data from?
 
-The data comes from songs on Spotify, songs from Billboard Hot 100, and songs released by year that were recorded in the US
+The data comes from songs on Spotify, songs from the Billboard Hot 100 list, and songs released by year that were recorded in the US.
 
 ### How did you collect your data?
 
@@ -15,7 +15,7 @@ For the ML part of the project, we also needed a pool of all songs published in 
 
 ### Is the source reputable?
 
-Yes, the sources are reputable. Spotify provides API data for developers that contain information about songs in its repertoire. The source we obtain our Billboard Hot 100 data from is from the Billboard website itself, and is therefore highly reputable. 
+Yes, the sources are reputable. Spotify provides API data for developers that contain information about songs in its repertoire. The source we obtain our Billboard Hot 100 data from is from the Billboard website itself, and is therefore highly reputable.
 
 ### How did you generate the sample? Is it comparably small or large? Is it representative or is it likely to exhibit some kind of sampling bias?
 
@@ -29,6 +29,7 @@ Yes, the sources are reputable. Spotify provides API data for developers that co
 
 ### How many data points are there total? How many are there in each group you care about (e.g. if you are dividing your data into positive/negative examples, are they split evenly)? Do you think this is enough data to perform your analysis later on?
 
+Though we have not finished scraping all the songs from Wikipedia, we can see there will be at least a couple thousand data points, each representing an individual song between the years 2014 and 2021. There are about 70 songs per page, 15 pages per year and we are looking at years 2014-2021. Hence there will be approximately 8400 data points in total. Since we’re dividing it up by years, there should be about 1050 data points per year. The data we get from Billboard should be a subset of these 8400 data points. We believe that this is a sufficient amount of data for us to do both hypothesis testing and machine learning. 
 
 ### Are there missing values? Do these occur in fields that are important for your project's goals?
 
