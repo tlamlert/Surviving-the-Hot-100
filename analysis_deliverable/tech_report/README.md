@@ -3,15 +3,19 @@ This is where you can type out your tech report.
 
 ### A defined hypothesis or prediction task, with clearly stated metrics for success.
 
+1. 
 H_0: There is no significant correlation between a song’s Danceability score and whether they are on the billboard for multiple weeks/a long time. (more than 10 weeks?)
 H_a: There is a significant correlation between a song’s Danceability score and whether they are on the billboard for multiple weeks/a long time. (more than 10 weeks?)
 
+2. 
 H_0: The average Valence score for songs with 10 weeks (subject to change) or more on the Billboard is not significantly different than the overall average Valence score for songs that have ever been on the Billboard.
 H_a: The average Valence score for songs with 10 weeks (subject to change) or more on the Billboard is significantly different than the overall average Valence score for songs that have ever been on the Billboard. 
 
+3. 
 H_0: The average Energy score for songs in the 80s is not significantly different from the average Energy score for songs in the 2010s.
 H_a: The average Energy score for songs in the 80s is significantly different from the average Energy score for songs in the 2010s. 
 
+4. 
 H_0: The lasso estimate (coefficient) of Danceability for determining the number of weeks a song is on the billboard will not be among the top __insert number__ characteristics.
 H_a: The lasso estimate (coefficient) of Danceability for determining the number of weeks a song is on the billboard will be among the top __insert number__ characteristics. (machine learning hypothesis)
 
