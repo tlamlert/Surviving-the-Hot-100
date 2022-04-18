@@ -7,4 +7,4 @@ This is the analysis deliverable's master directory! Please use the following sh
 ### Visualizations ###
 _You can edit this README to refer to your own visualizations once you upload them_
 
-[Visualizations](visualizations)
+[Visualizations](visualization)
