@@ -1,6 +1,10 @@
 import pandas as pd
-from stats_tests import chisquared_independence_test, two_sample_ttest
-from stats_functions import not_on_spotify, with_and_without_spotify, split_by_percentile
+from analysis_deliverable.stat.stats_tests import chisquared_independence_test, two_sample_ttest
+from analysis_deliverable.stat.stats_functions import weeks_on_chart_count, with_and_without_spotify, split_by_percentile
+from analysis_deliverable.visualization.visualization import correlation_heatmap
+import matplotlib.pyplot as plt
+import numpy as np
+
 
 SPOTIFY_ATTRIBUTES = ["danceability", "energy", "key", "loudness", "mode", "speechiness",\
     "acousticness", "instrumentalness", "liveness", "valence", "tempo", "type", "id", "uri",\
@@ -42,5 +46,41 @@ def h3():
 # h1()
 # h2()
 # h3()
+all_songs_df = with_spotify_dfs[1970]
+all_songs_df["decade"] = "1970s"
+print(all_songs_df)
 
-chisquared_independence_test(with_spotify_dfs[decade], "energy", "tempo")
+for decade in range(1980, 2030, 10):
+    with_decade_df = with_spotify_dfs[decade]
+    with_decade_df["decade"] = "%ss"%decade
+    all_songs_df = pd.concat([all_songs_df, with_decade_df])
+
+
+
+correlation_heatmap(all_songs_df)
+
+# print(weeks_on_chart_count(with_spotify_dfs[1970]))
+
+# print(all_songs_df.mean(axis=0))
+
+bar_info = pd.concat([
+                with_spotify_dfs[1970].mean(axis=0).to_frame('1970s'),
+                with_spotify_dfs[1980].mean(axis=0).to_frame('1980s'),
+                with_spotify_dfs[1990].mean(axis=0).to_frame('1990s'),
+                with_spotify_dfs[2000].mean(axis=0).to_frame('2000s'),
+                with_spotify_dfs[2010].mean(axis=0).to_frame('2010s'),
+                with_spotify_dfs[2020].mean(axis=0).to_frame('2020s')], axis=1)
+
+
+print(bar_info)
+
+for characteristic in bar_info.index:
+    fig, ax=plt.subplots()
+    current_row = bar_info.loc[characteristic]
+    current_row.plot.bar(ax=ax, yerr=current_row.std(), capsize=6)
+    ax.set_title(characteristic)
+    ax.set_xlabel("decade")
+    ax.set_ylabel("value")
+
+plt.show()
+

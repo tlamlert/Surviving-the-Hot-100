@@ -1,5 +1,5 @@
 import pandas as pd
-from util import all_variable_names_in_df
+from analysis_deliverable.stat.util import all_variable_names_in_df
 from scipy.stats import ttest_1samp, ttest_ind, ttest_rel, chi2_contingency
 
 def one_sample_ttest(values, population_mean):
