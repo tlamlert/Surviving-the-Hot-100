@@ -18,3 +18,5 @@ Our ML model (lasso regression + FFNN)
 
 ### Visualizations ###
 [Visualizations](visualization)
+heat map is under visualization folder
+bar chart is in hypothesis_testing.py under stat folder
