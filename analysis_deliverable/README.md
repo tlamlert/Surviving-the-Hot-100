@@ -4,7 +4,17 @@ This is the analysis deliverable's master directory! Please use the following sh
 ### Reports ###
 [Tech Report](tech_report/)
 
-### Visualizations ###
-_You can edit this README to refer to your own visualizations once you upload them_
+### Dataset ###
+Our full dataset
+[Dataset](dataset)
 
+### Hypothesis testing Code ###
+Our stats + hypothesis testing part 
+[stats](stat)
+
+### ML Code ###
+Our ML model (lasso regression + FFNN)
+[ML](machine_learning)
+
+### Visualizations ###
 [Visualizations](visualization)
