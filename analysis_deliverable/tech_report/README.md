@@ -18,11 +18,6 @@ H_0: The average Energy score for songs in the 1970s is significantly different 
 
 H_a: The average Energy score for songs in the 1970s is not significantly different from the average Energy score for songs in the 2010s. 
 
-4. 
-H_0: The lasso estimate (coefficient) of Danceability for determining the number of weeks a song is on the billboard will not be among the top __insert number__ characteristics.
-
-H_a: The lasso estimate (coefficient) of Danceability for determining the number of weeks a song is on the billboard will be among the top __insert number__ characteristics. (machine learning hypothesis)
-
 
 ### Why did you use this statistical test or ML algorithm? 
 
