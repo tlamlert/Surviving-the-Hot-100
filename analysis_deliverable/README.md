@@ -6,17 +6,22 @@ This is the analysis deliverable's master directory! Please use the following sh
 
 ### Dataset ###
 Our full dataset
+
 [Dataset](dataset)
 
 ### Hypothesis testing Code ###
 Our stats + hypothesis testing part 
+
 [stats](stat)
 
 ### ML Code ###
 Our ML model (lasso regression + FFNN)
+
 [ML](machine_learning)
 
 ### Visualizations ###
 [Visualizations](visualization)
-heat map is under visualization folder
-bar chart is in hypothesis_testing.py under stat folder
+
+code for heat map is under visualization folder
+
+code for bar chart is in hypothesis_testing.py under stat folder
