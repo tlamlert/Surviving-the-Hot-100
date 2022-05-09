@@ -27,9 +27,12 @@ def normalize(np_arr):
 
 def lasso(decade):
     # preprocess
-    to_drop = ["song", "artist", "1st_appear", "danceability", "type", "id", "uri", "track_href", "analysis_url"]
+    to_drop = ["song", "artist", "1st_appear", "type", "id", "uri", "track_href", "analysis_url"]
     all_songs_dfs = pd.read_csv(f'../dataset/song-features/{decade}s_features')
     with_spotify_dfs, without_spotify_dfs = with_and_without_spotify(all_songs_dfs)
+
+    # drop songs with 20 weeks ??
+    with_spotify_dfs = with_spotify_dfs[with_spotify_dfs["weeks_on_chart"]!=20]
 
     # drop unwanted columns
     for column in to_drop:
@@ -42,7 +45,7 @@ def lasso(decade):
 
     # normalize
     X = with_spotify_dfs.values
-    X = normalize(X)
+    # X = normalize(X)
 
     # split dataset into training and testing
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
@@ -56,6 +59,7 @@ def lasso(decade):
     scores = cross_val_score(model, X, y, scoring='neg_mean_absolute_error', cv=cv, n_jobs=-1)
     # force scores to be positive
     scores = np.absolute(scores)
+    # print("coeficients: " , model.coef_)
     print('Mean MAE: %.3f (%.3f)' % (np.mean(scores), np.std(scores)))
 
     # fit model

@@ -44,10 +44,9 @@ def main():
 
     # define model
     model = Sequential([
-        Dense(512, kernel_initializer='normal', activation="relu"),
-        Dense(512, kernel_initializer='normal', activation="relu"),
-        Dense(128, kernel_initializer='normal', activation="relu"),
-        Dense(1, kernel_initializer='normal', activation='linear')
+        Dense(64, kernel_initializer='normal', activation="relu"),
+        Dense(32, kernel_initializer='normal', activation="relu"),
+        Dense(1, kernel_initializer='normal'),
     ])
 
     # compile the model before calling fit()
@@ -92,7 +91,7 @@ def main():
     print(predictions)
 
     # save the model
-    model.save('./models/model-test')
+    model.save('./models/cat-model-test')
 
 if __name__ == '__main__':
     main()
