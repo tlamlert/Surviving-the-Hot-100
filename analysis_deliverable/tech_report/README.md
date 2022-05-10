@@ -14,9 +14,9 @@ H_0: The average Valence score for songs with 10 weeks or more on the Billboard 
 H_a: The average Valence score for songs with 10 weeks or more on the Billboard is significantly different than the overall average Valence score for songs that have ever been on the Billboard. 
 
 3. 
-H_0: The average Energy score for songs in the 1970s is significantly different from the average Energy score for songs in the 2010s.
+H_0: The average Energy score for songs in the 1970s is not significantly different from the average Energy score for songs in the 2010s.
 
-H_a: The average Energy score for songs in the 1970s is not significantly different from the average Energy score for songs in the 2010s. 
+H_a: The average Energy score for songs in the 1970s is significantly different from the average Energy score for songs in the 2010s. 
 
 
 ### Why did you use this statistical test or ML algorithm? 
