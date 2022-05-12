@@ -20,12 +20,17 @@ def with_and_without_spotify(complete_df):
 
 
 def get_data():
+    '''
+    Description: get dataset from the local directory and split it into training and testing data
+    Inputs: none
+    Returns: training inputs, testing inputs, training labels, testing labels
+    '''
     # preprocess
-    to_drop = ["song", "artist", "1st_appear", "danceability", "type", "id", "uri", "track_href", "analysis_url"]
+    to_drop = ["song", "artist", "1st_appear", "type", "id", "uri", "track_href", "analysis_url"]
     all_songs_dfs = pd.read_csv('../dataset/song-features/all_features')
     with_spotify_dfs, without_spotify_dfs = with_and_without_spotify(all_songs_dfs)
 
-    # drop songs with 20 weeks ??
+    # drop songs with 20 weeks
     with_spotify_dfs = with_spotify_dfs[with_spotify_dfs["weeks_on_chart"] != 20]
 
     # map to category (20 weeks excluded)
@@ -53,7 +58,6 @@ def get_data():
 
     # normalization
     with_spotify_dfs = with_spotify_dfs / (with_spotify_dfs.max() - with_spotify_dfs.min())
-    # print(with_spotify_dfs.describe())
     X = with_spotify_dfs.to_numpy()
 
     # Split dataset into training and testing :
@@ -63,6 +67,9 @@ def get_data():
 
 
 def model():
+    '''
+    Description: train a ffnn model with 2 dense layers
+    '''
     # preprocess
     X_train, X_test, y_train, y_test = get_data()
     one_hot_train = tf.keras.utils.to_categorical(y_train, num_classes=5)
@@ -72,7 +79,7 @@ def model():
     model = Sequential([
         Dense(64, kernel_initializer='normal', activation="relu"),
         Dense(32, kernel_initializer='normal', activation="relu"),
-        Dense(5, kernel_initializer='normal', activation='softmax'),
+        Dense(5, kernel_initializer='normal', activation="softmax"),
     ])
 
     # compile the model before calling fit()
@@ -109,7 +116,6 @@ def model():
     print("Generate predictions for 25 samples")
     print(y_test[:25])
     np.set_printoptions(precision=3, suppress=True)
-    # print(pred_test[:10])
     print(np.argmax(pred_test[:25], axis=1))
 
     np.save('y_test', y_test)
@@ -124,10 +130,3 @@ def model():
 
 if __name__ == '__main__':
     model()
-
-    # # find number of weeks at each percentile
-    # NUM_PERCENTILE = 5
-    # all_songs_df = pd.read_csv('../dataset/song-features/all_features')
-    # all_songs_df = all_songs_df[all_songs_df['weeks_on_chart'] != 20]
-    # all_songs_df.sort_values(by=['weeks_on_chart'])
-    # print(all_songs_df.quantile([e / NUM_PERCENTILE for e in range(1, NUM_PERCENTILE)]))
