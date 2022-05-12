@@ -68,7 +68,7 @@ def get_data():
 
 def model():
     '''
-    Description: train a ffnn model with 2 dense layers
+    Description: train a ffnn model with 3 dense layers
     '''
     # preprocess
     X_train, X_test, y_train, y_test = get_data()
@@ -115,7 +115,6 @@ def model():
     # Generate predictions on new data using `predict`
     print("Generate predictions for 25 samples")
     print(y_test[:25])
-    np.set_printoptions(precision=3, suppress=True)
     print(np.argmax(pred_test[:25], axis=1))
 
     np.save('y_test', y_test)
