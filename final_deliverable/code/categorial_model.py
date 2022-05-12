@@ -27,7 +27,7 @@ def get_data():
     '''
     # preprocess
     to_drop = ["song", "artist", "1st_appear", "type", "id", "uri", "track_href", "analysis_url"]
-    all_songs_dfs = pd.read_csv('../dataset/song-features/all_features')
+    all_songs_dfs = pd.read_csv('../../analysis_deliverable/dataset/song-features/all_features')
     with_spotify_dfs, without_spotify_dfs = with_and_without_spotify(all_songs_dfs)
 
     # drop songs with 20 weeks
