@@ -20,10 +20,14 @@ def with_and_without_spotify(complete_df):
 
 
 def get_data():
+    '''
+    Description: get dataset from the local directory and split it into training and testing data
+    Inputs: none
+    Returns: training inputs, testing inputs, training labels, testing labels
+    '''
     # preprocess
     to_drop = ["song", "artist", "1st_appear", "type", "id", "uri", "track_href", "analysis_url"]
-    # all_songs_dfs = pd.read_csv('../dataset/features-sample.csv')
-    all_songs_dfs = pd.read_csv('../dataset/song-features/1970s_features')
+    all_songs_dfs = pd.read_csv('../dataset/song-features/all_features')
     with_spotify_dfs, without_spotify_dfs = with_and_without_spotify(all_songs_dfs)
 
     # drop unwanted columns
@@ -39,6 +43,9 @@ def get_data():
 
 
 def main():
+    '''
+    Description: train a ffnn model with 2 dense layers
+    '''
     # preprocess
     X_train, X_test, y_train, y_test = get_data()
 
