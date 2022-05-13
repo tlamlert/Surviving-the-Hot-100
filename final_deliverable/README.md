@@ -1,9 +1,6 @@
 # Final Deliverable
 This is the final deliverable's master directory! Please use the following shortcut links to access the different components of this deliverable.
 
-### Poster ###
-[Poster]()
-
 ### Code ###
 [Code](code/)<br/>
 ([Capstone App Demo]())
@@ -12,7 +9,7 @@ This is the final deliverable's master directory! Please use the following short
 [Abstract](https://github.com/CS1951A-S21-Brown/PALs/blob/main/final_deliverable/)
 
 ### Final Presentation ###
-- [recording]()
+- [recording](https://youtu.be/ugJWEJ7qKys)
 - [Poster & Presentation](https://github.com/cs1951a-brown-spring-2022/Team-Name/tree/main/final_deliverable/poster)
 
 ### Visualizations ###
