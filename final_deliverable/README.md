@@ -3,7 +3,6 @@ This is the final deliverable's master directory! Please use the following short
 
 ### Code ###
 [Code](code/)<br/>
-([Capstone App Demo]())
 
 ### Abstract ###
 [Abstract + Socio-Historical Context and Impact Report](https://github.com/cs1951a-brown-spring-2022/Team-Name/blob/main/final_deliverable/Abstract%20%2B%20Socio-Historical%20Context%20and%20Impact%20Report.pdf)
