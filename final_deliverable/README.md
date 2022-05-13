@@ -6,7 +6,7 @@ This is the final deliverable's master directory! Please use the following short
 ([Capstone App Demo]())
 
 ### Abstract ###
-[Abstract](https://github.com/CS1951A-S21-Brown/PALs/blob/main/final_deliverable/)
+[Abstract + Socio-Historical Context and Impact Report](https://github.com/CS1951A-S21-Brown/PALs/blob/main/final_deliverable/)
 
 ### Final Presentation ###
 - [recording](https://youtu.be/ugJWEJ7qKys)
